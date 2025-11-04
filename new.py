@@ -6,7 +6,7 @@ from langchain_community.document_loaders import WebBaseLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
-from langchain_core.schema import Document
+from langchain_core.documents import Document
 from langchain_core.prompts import ChatPromptTemplate, HumanMessagePromptTemplate, SystemMessagePromptTemplate
 from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
 
@@ -84,6 +84,7 @@ if st.button("Analyze"):
 
             except Exception as e:
                 st.error(f"Something went wrong: {e}")
+
 
 
 
