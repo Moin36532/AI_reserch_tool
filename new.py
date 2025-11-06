@@ -16,6 +16,7 @@ st.title("Web Research Assistant 🔍")
 
 url = st.text_input("Enter a webpage URL")
 query = st.text_input("Enter your query")
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 
 
 if st.button("Analyze"):
@@ -84,6 +85,7 @@ if st.button("Analyze"):
 
             except Exception as e:
                 st.error(f"Something went wrong: {e}")
+
 
 
 
